@@ -214,7 +214,7 @@ h3{font-size: 32px;letter-spacing: 4px;line-height: 46px;color: var(--primary);f
     overflow: hidden;
     box-shadow: inset 0px 7px 4px rgba(54, 51, 90, 0.5);
 }
-.section_content .left_img img{width: 100%;}
+.section_content .left_img img{width: 100%;position: relative;z-index: -1;}
 .section_content .right_content{margin-top: 60px;}
 .section_content .right_content h2, .section_content .right_content ul{margin-bottom: 36px;}
 .section_content .right_content .DATE{display: flex;padding: 0 90px;gap: 16px;align-items: center;}
