@@ -95,6 +95,7 @@ h5{font-size: 20px;}
     padding: 48px 60px 188px 60px;
     background:var(--linearbg);
     position: relative;
+    margin-top: -5px;
 }
 .section_title{padding-left: 39px;margin: 0 auto;background: url(icon-Title.svg)no-repeat center left;background-size: 36px;width: fit-content;margin-bottom: 36px;}
 /* .section_title:first-child{ filter:drop-shadow(0px 4px 10px rgba(100, 91, 210, 0.3));} */
@@ -193,6 +194,7 @@ h3{font-size: 32px;letter-spacing: 4px;line-height: 46px;color: var(--primary);f
     position: absolute;
     top: -80px;
     left: 0;
+   
 }
 .triangle{
     width: 0;
@@ -203,6 +205,14 @@ h3{font-size: 32px;letter-spacing: 4px;line-height: 46px;color: var(--primary);f
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+}
+.Section_four .triangle_box{z-index: 2;}
+.Section_four .triangle{
+    width: 100%;
+    height: 80px;
+    position: relative;
+    clip-path: polygon(50% 10%, 0% 100%, 100% 100%);
+    background: #C0BDF2;
 }
 .layershow{position: relative;z-index: 2;margin-bottom: 45px;}
 .section_content{
