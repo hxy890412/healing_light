@@ -13,11 +13,12 @@
     letter-spacing: 2px;
 }
 /* 字體樣式 */
-h1,h2,h3,h4{letter-spacing: 0.08em;}
+h1,h2,h3,h4,h5{letter-spacing: 0.08em;}
 h1{font-size: 48px;}
 h2{font-size: 40px;}
 h3{font-size: 32px;}
 h4{font-size: 24px;}
+h5{font-size: 20px;}
 .text_shadow{filter: drop-shadow(0px 4px 10px rgba(100, 91, 210, 0.5));color: #FFF;}
 .Rubik{font-family: 'Rubik' ,sans-serif;}
 .Crimson{font-family: "Crimson Text", serif;font-weight: 600;}
@@ -344,3 +345,26 @@ h3{font-size: 32px;letter-spacing: 4px;line-height: 46px;color: var(--primary);f
 .Section_four .top_content{padding:104px 0;margin:0 auto;width: fit-content;}
 .Section_four .top_content h1{padding-bottom: 36px;}
 .Section_four .top_content ul h3:last-child{text-align: right;padding-top: 16px;}
+
+.Section_four .mid_content{
+    display: flex;
+    flex-direction: column;
+    max-width: 758px;
+    width: 100%;
+    gap: 36px;
+    margin: 0 auto;
+    text-align: center;
+}
+.Section_four .mid_content ul{
+    width: 100%;
+    display: flex;
+}
+.Section_four .mid_content li{
+    max-width: 578px;
+    padding: 34px 127px;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: inset 0px 4px 4px rgba(83, 76, 174, 0.4);
+    text-align: center;
+    color: #FFF;
+    clip-path: polygon(20px 0, calc(100% - 20px) 0, 100% 20px, 100% calc(100% - 20px), calc(100% - 20px) 100%, 20px 100%, 0 calc(100% - 20px), 0 20px) ;
+}
