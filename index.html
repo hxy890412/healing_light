@@ -18,9 +18,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </head>
 <body>
     <div class="material_bg">
+        <a href="#" class="toTop"></a>
         <!-- 版頭 -->
         <div class="FOR_TOP">
             <div class="Top_Bar">
@@ -225,19 +228,20 @@
 
     <script>
         $(document).ready(function () {
-             $('.toTop').on('click', function (e) {
-                e.preventDefault();
-                $('html,body').animate({ // 有些瀏覽器只支援html，有些只支援body 所以兩個都寫進去
-                scrollTop: 0,
-                }, 700)
-             });
-            $('.Top_bar').on('click','a', function (e) {
+
+            $('.toTop').click(function(){
+                $('html,body').animate({
+                    scrollTop: 0
+                }, 100);       
+            });
+
+            $('.Top_bar').on('click', 'a', function (e) {
                 e.preventDefault();
                 const anchor = $(this).attr('href');
-                const linkScroll = $(anchor).offset().top;
+                const linkScroll = $(anchor).offset().top - 43; // 考慮到頂部導航的高度，調整滾動位置
                 $('html,body').stop().animate({ 
-                scrollTop: linkScroll -43
-                },700)
+                    scrollTop: linkScroll
+                }, 700);
             });
         });
     </script>

@@ -12,6 +12,9 @@
     font-weight: 900;
     letter-spacing: 2px;
 }
+html {
+    scroll-behavior: smooth;
+}
 /* 字體樣式 */
 h1,h2,h3,h4,h5{letter-spacing: 0.08em;}
 h1{font-size: 48px;}
@@ -440,7 +443,23 @@ h3{font-size: 32px;letter-spacing: 4px;line-height: 46px;color: var(--primary);f
 .light_paint .img_mask:hover::after{
     height: 0;
 }
-@media screen and (min-width:1440px) {
+
+.toTop{
+    position: fixed;
+    background: url(Lily_head.svg)no-repeat center center;
+    background-size: 100%;
+    width: 80px;
+    height: 65px;
+    right: 24px;
+    bottom: 24px;
+    z-index: 999;
+    cursor: pointer;
+}
+
+@media screen and (min-width:1728px){
+    .bottom_content{max-width: 1200px;}
+    .bottom_content ul img+li{max-width: 100%!important;}
+    .light_paint{max-width: 100%!important;justify-content: center;gap: 98px;}
     .Section_four .container{
         max-width: 1200px;
         margin: 0 auto;
@@ -453,9 +472,10 @@ h3{font-size: 32px;letter-spacing: 4px;line-height: 46px;color: var(--primary);f
         max-width: 948px;
     }
     .triangle_box{top: -79px;}
-    .bottom_content{max-width: 1200px;}
-    .bottom_content ul img+li{max-width: 100%!important;}
-    .light_paint{max-width: 100%!important;justify-content: center;gap: 98px;}
+}
+@media screen and (min-width:1440px) {
+   
+    
 }
 @media screen and (max-width:1200px) {
     .banner_box{height: auto;}
