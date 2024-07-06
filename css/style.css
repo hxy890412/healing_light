@@ -361,10 +361,16 @@ h3{font-size: 32px;letter-spacing: 4px;line-height: 46px;color: var(--primary);f
 }
 .Section_four .mid_content li{
     max-width: 578px;
-    padding: 34px 127px;
+    width: 100%;
+    padding: 34px 0px;
     background: rgba(255, 255, 255, 0.2);
     box-shadow: inset 0px 4px 4px rgba(83, 76, 174, 0.4);
     text-align: center;
     color: #FFF;
     clip-path: polygon(20px 0, calc(100% - 20px) 0, 100% 20px, 100% calc(100% - 20px), calc(100% - 20px) 100%, 20px 100%, 0 calc(100% - 20px), 0 20px) ;
 }
+.Section_four .mid_content li h5{padding-left:44px;width: fit-content;line-height: 36px;display: inline-block;text-shadow: 0px 4px 10px rgba(100, 91, 210, 0.3);}
+.mid_content ul:nth-child(3){justify-content: flex-end;}
+.mid_content .text_icon1{ background: url(Group.svg)no-repeat left center; background-size: 45px;background-position-y: -1px;}
+.mid_content .text_icon2{ background: url(Group-1.svg)no-repeat left center; background-size: 45px;background-position-y: -1px;}
+.mid_content .text_icon3{ background: url(Group-2.svg)no-repeat left center; background-size: 45px;background-position-y: -1px;}
