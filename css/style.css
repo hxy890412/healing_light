@@ -213,6 +213,8 @@ h3{font-size: 32px;letter-spacing: 4px;line-height: 46px;color: var(--primary);f
     position: relative;
     clip-path: polygon(50% 10%, 0% 100%, 100% 100%);
     background: #C0BDF2;
+    border-width: unset;
+    border-style: unset;
 }
 .layershow{position: relative;z-index: 2;margin-bottom: 45px;}
 .section_content{
