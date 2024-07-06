@@ -544,4 +544,11 @@ h3{font-size: 32px;letter-spacing: 4px;line-height: 46px;color: var(--primary);f
 @media screen and (max-width:768px){
     .Amber_gift > img{top: -6px;width: 95px;}
     .Section_three .invite_card_box{padding-top: 0;}
+    .Section_one {padding: 48px 20px 78px 20px;}
+    .section_two{padding: 36px 20px 82px 20px;}
+    .right_content h2{font-size: 32px;}
+    .section_content .right_content .DATE{padding: 0;}
+    .section_content .right_content h2, .section_content .right_content ul{margin-bottom: 20px;}
+    .section_content .right_content h3{font-size: 24px;}
+    .section_content .right_content .DATE li{font-size: 48px;}
 }
