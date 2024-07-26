@@ -155,6 +155,8 @@
             </div>
             <!-- 區塊四 -->
             <div class="Section_four " id="s4">
+                <img src="css/To_u2_light.jpg" alt="hidden" class="hidden_img">
+                <img src="css/To_u_light.png" alt="hidden" class="hidden_img">
                 <div class="triangle_box " id="s4">
                     <div class="triangle material_bg"></div>
                 </div>
@@ -199,6 +201,7 @@
                             <li>
                                 <h5 class="SW">AmberLand 燈光畫 乙幅 *1名</h5>
                             </li>
+                            <p>溫馨提示：點擊圖片可開關燈</p>
                             <li class="light_paint">
                                 <div class="img_mask light_paint_img"> <img src="css/Amber_light_paint.svg" alt="light01"></div>
                                 <div class="img_mask light_paint_img"> <img src="css/Amber_light_paint2.svg" alt="light02"></div>
@@ -210,9 +213,10 @@
                             <li>
                                 <h5 class="SW">To U 燈光畫 乙幅 *1名</h5>
                             </li>
+                            <p>點擊圖片可開燈</p>
                             <li class="light_paint">
-                                <div class="img_mask light_paint_img"> <img src="css/ToU_light_paint.svg" alt="light01"></div>
-                                <div class="img_mask light_paint_img"> <img src="css/ToU_light_paint2.svg" alt="light02"></div>
+                                <div class="img_mask light_paint_img1"> <img src="css/To_u_dark.png" alt="light01"></div>
+                                <div class="img_mask light_paint_img2"> <img src="css/To_u2_dark.jpg" alt="light02"></div>
                             </li>
 
                         </ul>
@@ -254,13 +258,21 @@
                 $(".second_img" ).toggleClass("open_img"); 
             });
 
-            $('.img_mask').on('click',function () {
-                $(this).toggleClass("light_mask");
-            });
+            // $('.img_mask').on('click',function () {
+            //     $(this).toggleClass("light_mask");
+            // });
 
             $('.Top_Bar ul a').on('click', function () {
                 $(".nav_img > img").removeClass("img_change");
                 $(this).find("img").addClass("img_change");
+            });
+
+            $('.light_paint_img1').on('click',function () {
+                $(this).toggleClass("change_light_img1");
+            });
+
+            $('.light_paint_img2').on('click',function () {
+                $(this).toggleClass("change_light_img2");
             });
 
 
