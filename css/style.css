@@ -360,6 +360,7 @@ h3{font-size: 32px;letter-spacing: 4px;line-height: 46px;color: var(--primary);f
     left: 0;
     top: unset;
 }
+p.flip_card{display: none;}
 
 /* 區塊四 */
 .Section_four{width: 100%;position: relative;padding: 48px 120px 120px 80px; background-color: #C0BDF2;}
@@ -457,7 +458,25 @@ h3{font-size: 32px;letter-spacing: 4px;line-height: 46px;color: var(--primary);f
     height: 0;
 } */
 
-.light_mask{height: 0;}
+.light_mask:after{height: 0!important;}
+.buy_link{text-align: center;}
+.buy_link h5{color: rgba(83, 76, 174);}
+.buy_link a{
+    display: block;
+    background:rgba(83, 76, 174);
+    padding: 12px 36px;
+    border-radius: 8px 30px 8px 30px;
+    color: #FFF;
+    width: fit-content;
+    margin: 24px auto;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+}
+
+
+
+
 
 .toTop{
     position: fixed;
@@ -523,6 +542,8 @@ h3{font-size: 32px;letter-spacing: 4px;line-height: 46px;color: var(--primary);f
 }
 
 @media screen and (max-width:960px){
+    p.flip_card{font-size: 14px;font-weight: 400;color: #5c56a4;margin-top: 16px;display: block;position: relative;top: 16px;}
+
     .creater_box .ToU_box,.creater_box .Amber_box{flex-direction: column;}
     /* 票卡 */
     .Section_three .invite_card_box ul{width: 350px;margin: 0 auto; position: relative;cursor: pointer;}
@@ -551,6 +572,7 @@ h3{font-size: 32px;letter-spacing: 4px;line-height: 46px;color: var(--primary);f
 } 
 
 @media screen and (max-width:768px){
+    p.flip_card{top: 116px;}
     .Amber_gift > img{top: -6px;width: 95px;}
     .Section_three .invite_card_box{padding-top: 0;}
     .Section_one {padding: 48px 20px 78px 20px;}
@@ -563,7 +585,7 @@ h3{font-size: 32px;letter-spacing: 4px;line-height: 46px;color: var(--primary);f
     .section_content .right_content .DATE li{font-size: 48px;}
     .FOR_TOP{
         bottom: 0;
-        background: rgba(255, 255, 255, 0.5);
+        background: #C0BDF2;
         padding: 0;
     }
     .Top_Bar{padding: 0;}
@@ -672,7 +694,7 @@ h3{font-size: 32px;letter-spacing: 4px;line-height: 46px;color: var(--primary);f
         left: 150px;
         right: unset;
         top: -18px;}  
-    .Section_four .mid_content li h5{font-size: 15px;}
+    .Section_four .mid_content li h5{font-size: 15px;filter: none;}
     .bottom_content ul img+li h5{font-size: 15px;}
     .Amber_gift > img {
         top: -6px;
@@ -699,6 +721,9 @@ h3{font-size: 32px;letter-spacing: 4px;line-height: 46px;color: var(--primary);f
     .open_img{
         width: 280px!important;
     }
+    .buy_link h5{font-size: 13px;}
+    .buy_link a{font-size: 20px;}
+    .toTop{width: 48px;bottom: 74px ;}
 
 }
 
