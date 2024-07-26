@@ -61,6 +61,8 @@ h5{font-size: 20px;}
     left: 0;
 }
 .Top_Bar ul a:hover:after{width: 100%;}
+
+.Top_Bar .nav_img{display: none;}
 /* Header區塊 END */
 
 /* 中間內容 */
@@ -495,6 +497,8 @@ p.flip_card{display: none;}
     background-size: 100%;
 }
 
+
+
 @media screen and (min-width:1728px){
     .bottom_content{max-width: 1200px;}
     .bottom_content ul img+li{max-width: 100%!important;}
@@ -583,6 +587,7 @@ p.flip_card{display: none;}
     .section_content .right_content h2, .section_content .right_content ul{margin-bottom: 20px;}
     .section_content .right_content h3{font-size: 24px;}
     .section_content .right_content .DATE li{font-size: 48px;}
+    .Top_Bar ul a:hover:after{width: 0;}
     .FOR_TOP{
         bottom: 0;
         background: #C0BDF2;
@@ -601,8 +606,31 @@ p.flip_card{display: none;}
         height: 100%;
     }
     .Top_Bar ul a {
-        padding: 20px 0;
+        padding: 8px 0;
+        font-size: 12px;
+        line-height: 20px;
     }
+    
+    .Top_Bar .nav_img{
+        display: block;
+        width: 48px;
+        height: 48px;
+        overflow: hidden;
+        position: relative;
+        margin: 0 auto;
+    }
+    .Top_Bar .nav_img > img{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: all 0.3s ease-in;
+    }
+
+    .img_change{
+        bottom: unset;
+        top: 0;
+    }
+
     .toTop{bottom: 104px;}
     .Section_three .left_top {
         top: 190px;
@@ -723,7 +751,7 @@ p.flip_card{display: none;}
     }
     .buy_link h5{font-size: 13px;}
     .buy_link a{font-size: 20px;}
-    .toTop{width: 48px;bottom: 74px ;}
+    .toTop{width: 60px;bottom: 84px;right: 16px;}
 
 }
 

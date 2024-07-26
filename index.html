@@ -28,9 +28,9 @@
         <div class="FOR_TOP">
             <div class="Top_Bar">
                 <ul>
-                    <li><a href="#s1">創作者</a></li>
-                    <li><a href="#s2">聯展資訊</a></li>
-                    <li><a href="#s3">現場活動</a></li>
+                    <li><a href="#s1"><div class="nav_img"><img src="css/nav_one.svg" alt="group-1"></div>創作者</a></li>
+                    <li><a href="#s2"><div class="nav_img"><img src="css/nav_two.svg" alt="group-2"></div>聯展資訊</a></li>
+                    <li><a href="#s3"><div class="nav_img"><img src="css/nav_three.svg" alt="group-3"></div>現場活動</a></li>
                 </ul>
             </div>
         </div>
@@ -54,7 +54,7 @@
                         <div class="ToU_box">
                             <!-- 標籤 -->
                                 <div class="tag">#療癒可愛</div>
-                            <a href="#" class="creater_logo">
+                            <a href="https://www.instagram.com/hi.cctt/" class="creater_logo" target="_blank">
                                 <img src="css/To U-圓形Logo.png" alt="">
                             </a>
                             <div class="creater_content">
@@ -74,7 +74,7 @@
                         <div class="Amber_box">
                             <!-- 標籤 -->
                                 <div class="tag">#溫柔治癒</div>
-                            <a href="#" class="creater_logo">
+                            <a href="https://www.instagram.com/amber.land25/" class="creater_logo"  target="_blank">
                                 <img src="css/amber.svg" alt="">
                             </a>
                             <div class="creater_content">
@@ -256,6 +256,11 @@
 
             $('.img_mask').on('click',function () {
                 $(this).toggleClass("light_mask");
+            });
+
+            $('.Top_Bar ul a').on('click', function () {
+                $(".nav_img > img").removeClass("img_change");
+                $(this).find("img").addClass("img_change");
             });
 
 
