@@ -140,9 +140,9 @@
                     </div>
                     <div class="invite_card_box">
                         <h3 class="bling">療癒之光 紀念票卡</h3>
-                        <ul>
-                            <img src="css/invitecard.png" alt="invitecard">
-                            <img src="css/invitecard_back.png" alt="invitecard">
+                        <ul class="invite_card">
+                            <img src="css/invitecard.png" alt="invitecard" class="first_img">
+                            <img src="css/invitecard_back.png" alt="invitecard" class="second_img">
                         </ul>
                     </div>
                     <h1>紀念票卡 限量<span class="Crimson">200</span>張</h1>
@@ -243,7 +243,14 @@
                     scrollTop: linkScroll
                 }, 700);
             });
+
+            $('.invite_card').click(function(){
+                $(".first_img" ).toggleClass("close_img");
+                $(".second_img" ).toggleClass("open_img"); 
+            });
         });
+
+
     </script>
 </body>
 </html>
