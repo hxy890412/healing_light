@@ -443,8 +443,8 @@ p.flip_card{display: none;}
 .light_paint{max-width:758px;width: 100%; height: 297px;display: flex;justify-content: space-between;}
 .light_paint img{height: 100%;cursor: pointer;}
 .light_paint .img_mask{position: relative;width:fit-content;height: 100%;cursor: pointer;}
-.change_light_img1{content: url(To_u_light.png);width: 100%!important;height: 100%;}
-.change_light_img2{content: url(To_u2_light.jpg);width: 100%!important;height: 100%;}
+.change_light_img1{content: url(To_u_light.png);height: 100%;}
+.change_light_img2{content: url(To_u2_light.jpg);height: 100%;}
 .hidden_img{display: none;}
 /* .light_paint .img_mask:after{
     position: absolute;
@@ -567,7 +567,7 @@ p.flip_card{display: none;}
     .Section_four .top_content{padding: 0 0 36px 0;}
     .Section_four .mid_content li{max-width: 100%;}
     .bottom_content{margin:36px auto;}
-    .light_paint{max-width: 100%;gap: 8px;height: auto;}
+    .light_paint{max-width: 100%;gap: 8px;}
     .light_paint img{width: 100%;}
     .s3_content{padding: 48px 60px 73px 60px;}
     .close_img{
@@ -672,6 +672,10 @@ p.flip_card{display: none;}
     .Section_four h3{font-size: 16px;text-align: center;}
     .ToU_gift > img{right: -13px;}
     .ToU_box .tag,.Amber_box .tag{font-size: 16px;}
+    
+    /* .change_light_img1{width: fit-content;height: auto;}
+    .change_light_img2{width: fit-content;height: auto;} */
+
 }
 
 @media screen and (max-width:500px){

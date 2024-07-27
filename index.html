@@ -201,7 +201,7 @@
                             <li>
                                 <h5 class="SW">AmberLand 燈光畫 乙幅 *1名</h5>
                             </li>
-                            <p>溫馨提示：點擊圖片可開關燈</p>
+                            <p class="">溫馨提示：點擊圖片可開關燈</p>
                             <li class="light_paint">
                                 <div class="img_mask light_paint_img"> <img src="css/Amber_light_paint.svg" alt="light01"></div>
                                 <div class="img_mask light_paint_img"> <img src="css/Amber_light_paint2.svg" alt="light02"></div>
@@ -267,11 +267,11 @@
                 $(this).find("img").addClass("img_change");
             });
 
-            $('.light_paint_img1').on('click',function () {
+            $('.light_paint_img1 > img').on('click',function () {
                 $(this).toggleClass("change_light_img1");
             });
 
-            $('.light_paint_img2').on('click',function () {
+            $('.light_paint_img2 > img').on('click',function () {
                 $(this).toggleClass("change_light_img2");
             });
 
