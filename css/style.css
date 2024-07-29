@@ -166,9 +166,9 @@ h3{font-size: 32px;letter-spacing: 4px;line-height: 46px;color: var(--primary);f
     line-height: 30px;
 }
 .creater_box .creater_logo{min-width: 250px;height: 250px;display: block;overflow: hidden;border-radius: 1000px;}
-.Amber_box .creater_logo{overflow: visible;border-radius: 0;}
+
 .creater_box .creater_logo img{width: 100%;height: 100%;object-fit: cover;transition: all 0.5s ease;}
-.creater_box .Amber_box .creater_logo img{width: 100%;height: auto; object-fit: cover;transition: all 0.5s ease;}
+.creater_box .Amber_box .creater_logo img{width: 100%;height: 100%; object-fit: cover;transition: all 0.5s ease;}
 .creater_box a:hover > img{transform: scale(1.2,1.2);}
 /* 右區塊 */
 .creater_content{text-align: left;width: 100%;display: flex;flex-direction: column;justify-content: center;}
@@ -745,6 +745,7 @@ p.flip_card{display: none;}
     .light_paint{
         flex-direction: column;
         align-items: center;
+        height: auto;
     }
     /* .light_paint .img_mask{width: 100%;} */
     .light_paint img{width: 100%;}
