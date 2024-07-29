@@ -201,10 +201,10 @@
                             <li>
                                 <h5 class="SW">AmberLand 燈光畫 乙幅 *1名</h5>
                             </li>
-                            <p class="">溫馨提示：點擊圖片可開關燈</p>
+                            <p class="SW">溫馨提示：點擊圖片可開關燈</p>
                             <li class="light_paint">
-                                <div class="img_mask light_paint_img"> <img src="css/Amber_light_paint.svg" alt="light01"></div>
-                                <div class="img_mask light_paint_img"> <img src="css/Amber_light_paint2.svg" alt="light02"></div>
+                                <div class="img_mask light_paint_img"> <img src="css/Amber_light.png" alt="light01"></div>
+                                <div class="img_mask light_paint_img"> <img src="css/ToU_light_v2.png" alt="light02"></div>
                             </li>
                         </ul>
 
@@ -213,10 +213,10 @@
                             <li>
                                 <h5 class="SW">To U 燈光畫 乙幅 *1名</h5>
                             </li>
-                            <p>點擊圖片可開燈</p>
+                            <p class="SW">點擊圖片可開燈</p>
                             <li class="light_paint">
-                                <div class="img_mask light_paint_img1"> <img src="css/To_u_dark.png" alt="light01"></div>
-                                <div class="img_mask light_paint_img2"> <img src="css/To_u2_dark.jpg" alt="light02"></div>
+                                <div class="img_mask light_paint_img1"> <img src="css/ToU_light_v1.png" alt="light01"></div>
+                                <div class="img_mask light_paint_img2"> <img src="css/ToU_light_v2.png" alt="light02"></div>
                             </li>
 
                         </ul>
@@ -267,12 +267,17 @@
                 $(this).find("img").addClass("img_change");
             });
 
-            $('.light_paint_img1 > img').on('click',function () {
-                $(this).toggleClass("change_light_img1");
-            });
+            // $('.light_paint > img').on('click',function () {
+            //     $(this).toggleClass("change_light_img1");
+            // });
 
-            $('.light_paint_img2 > img').on('click',function () {
-                $(this).toggleClass("change_light_img2");
+            // $('.light_paint_img2 > img').on('click',function () {
+            //     $(this).toggleClass("change_light_img2");
+            // });
+
+            $('.img_mask').on('click', function () {
+                // $(".light_paint img").removeClass("turn_light");
+                $(this).find("img").toggleClass("turn_light");
             });
 
 
