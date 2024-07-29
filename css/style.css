@@ -445,6 +445,7 @@ p.flip_card{display: none;}
 .light_paint img{height: 600px;cursor: pointer;position: relative;bottom: 300px;}
 .light_paint .img_mask{position: relative;width:fit-content;height: 300px;cursor: pointer;overflow: hidden;}
 .turn_light{bottom: 0!important;}
+.turn_light_mob{top:0}
 .hidden_img{display: none;}
 
 .buy_link{text-align: center;}
@@ -561,7 +562,7 @@ p.flip_card{display: none;}
     
 } 
 
-@media screen and (max-width:768px){
+@media screen and (max-width:784px){
     p.flip_card{top: 116px;}
     .Amber_gift > img{top: -6px;width: 95px;}
     .Section_three .invite_card_box{padding-top: 0;}
@@ -654,9 +655,16 @@ p.flip_card{display: none;}
     .Section_four h3{font-size: 16px;text-align: center;}
     .ToU_gift > img{right: -13px;}
     .ToU_box .tag,.Amber_box .tag{font-size: 16px;}
-    
-    /* .change_light_img1{width: fit-content;height: auto;}
-    .change_light_img2{width: fit-content;height: auto;} */
+
+    .light_paint .img_mask{width: 100%;overflow: hidden;height: auto;}
+    .light_paint img{
+        width: 100%;
+        height: auto;
+        display: block;
+        position: absolute;
+        bottom: 0;
+    }
+
 
 }
 
@@ -729,7 +737,7 @@ p.flip_card{display: none;}
         align-items: center;
         height: auto;
     }
-    /* .light_paint .img_mask{width: 100%;} */
+   
     .light_paint img{width: 100%;}
     .S1_sticker{min-width:50px;right: 10px;top: -17px;}
     .creater_box .creater_logo{min-width: 200px;height: 200px;max-width: 200px;}

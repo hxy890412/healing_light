@@ -258,30 +258,56 @@
                 $(".second_img" ).toggleClass("open_img"); 
             });
 
-            // $('.img_mask').on('click',function () {
-            //     $(this).toggleClass("light_mask");
-            // });
 
             $('.Top_Bar ul a').on('click', function () {
                 $(".nav_img > img").removeClass("img_change");
                 $(this).find("img").addClass("img_change");
             });
 
-            // $('.light_paint > img').on('click',function () {
-            //     $(this).toggleClass("change_light_img1");
-            // });
+          
+           
 
-            // $('.light_paint_img2 > img').on('click',function () {
-            //     $(this).toggleClass("change_light_img2");
-            // });
 
-            $('.img_mask').on('click', function () {
+        });
+
+        function hideMobilePage() {
+                // 獲取螢幕寬度
+            const windowWidth = $(window).width();
+            if (windowWidth < 784) {
+                // 寬度768以內要執行的事情
+                $('.img_mask').on('click', function () {
+                $(this).find("img").toggleClass("turn_light_mob");
+                });
+            } else {
+                // 寬度大於768要執行的事情
+                $('.img_mask').on('click', function () {
                 // $(".light_paint img").removeClass("turn_light");
                 $(this).find("img").toggleClass("turn_light");
-            });
+                });
 
+            }
+        }
+        // 初始化時執行一次
+        hideMobilePage();
+        // 當螢幕寬度改變時執行
+        $(window).resize(function () { 
+            hideMobilePage();
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            function adjustDivHeight() {
+                var img = document.querySelector('.img_mask img');
+                var div = img.parentElement;
+                if (img.complete) {
+                    div.style.height = (img.height / 2) + 'px';
+                } else {
+                    img.onload = function() {
+                        div.style.height = (img.height / 2) + 'px';
+                    };
+                }
+            }
 
-
+            window.addEventListener('resize', adjustDivHeight);
+            adjustDivHeight();
         });
 
 
