@@ -512,6 +512,11 @@ p.flip_card{display: none;}
     right: 4px;
     left: unset;
 }
+.light_btn{
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 8px;
+}
 
 
 
