@@ -494,6 +494,7 @@ p.flip_card{display: none;}
     background: rgba(255,255,255,0.5);
     backdrop-filter: blur(5px);
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 .turn_light_btn:before{
     content:"";
