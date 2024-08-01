@@ -485,6 +485,34 @@ p.flip_card{display: none;}
     background-size: 100%;
 }
 
+.turn_light_btn{
+    border-radius: 40px;
+    border: 0;
+    width: 56px;
+    height: 32px;
+    position: relative;
+    background: rgba(255,255,255,0.5);
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+.turn_light_btn:before{
+    content:"";
+    display: block;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    background: #9890F9;
+    left:4px;
+    top: 4px;
+    transition: all 0.3s ease;
+
+}
+.btn_move::before{
+    right: 4px;
+    left: unset;
+}
+
 
 
 @media screen and (min-width:1728px){

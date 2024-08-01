@@ -201,8 +201,8 @@
                             <li>
                                 <h5 class="SW">AmberLand 燈光畫 乙幅 *1名</h5>
                             </li>
-                            <button class="turn_light_btn_A">開燈</button>
-                            <p class="SW">溫馨提示：點擊圖片可開關燈</p>
+                            <button class="turn_light_btn_A turn_light_btn"></button>
+                            <!-- <p class="SW">溫馨提示：點擊圖片可開關燈</p> -->
                             <li class="light_paint">
                                 <div class="img_mask light_paint_img"> <img src="css/Amber_light.png" alt="light01"></div>
                                 <div class="img_mask light_paint_img"> <img src="css/Amber_light_v2_new.png" alt="light02"></div>
@@ -214,8 +214,8 @@
                             <li>
                                 <h5 class="SW">To U 燈光畫 乙幅 *1名</h5>
                             </li>
-                            <button class="turn_light_btn_B">開燈</button>
-                            <p class="SW">溫馨提示：點擊圖片可開關燈</p>
+                            <button class="turn_light_btn_B turn_light_btn"></button>
+                            <!-- <p class="SW">溫馨提示：點擊圖片可開關燈</p> -->
                             <li class="light_paint">
                                 <div class="img_mask light_paint_img"> <img src="css/ToU_light_v1.png" alt="light01"></div>
                                 <div class="img_mask light_paint_img"> <img src="css/ToU_light_v2.png" alt="light02"></div>
@@ -284,10 +284,12 @@
 
                 $('.turn_light_btn_A').on('click', function () {
                 $('.turn_light_btn_A ~ li').find("div > img").toggleClass("turn_light_mob");
+                $(this).toggleClass("btn_move");
                 });
 
                 $('.turn_light_btn_B').on('click', function () {
                 $('.turn_light_btn_B ~ li').find("div > img").toggleClass("turn_light_mob");
+                $(this).toggleClass("btn_move");
                 });
             } else {
                 // 寬度大於768要執行的事情
