@@ -445,7 +445,7 @@ p.flip_card{display: none;}
 .light_paint img{height: 600px;cursor: pointer;position: relative;bottom: 300px;}
 .light_paint .img_mask{position: relative;width:fit-content;height: 300px;cursor: pointer;overflow: hidden;}
 .turn_light{bottom: 0!important;}
-.turn_light_mob{top:0}
+.turn_light_mob{top:0;bottom: unset!important;}
 .hidden_img{display: none;}
 
 .buy_link{text-align: center;}
@@ -656,15 +656,15 @@ p.flip_card{display: none;}
     .ToU_gift > img{right: -13px;}
     .ToU_box .tag,.Amber_box .tag{font-size: 16px;}
 
-    .light_paint .img_mask{width: 100%;overflow: hidden;height: auto;}
-    .light_paint img{
-        width: 100%;
+}
+@media screen and (max-width:712px){
+    .light_paint{
+        flex-direction: column;
+        align-items: center;
         height: auto;
-        display: block;
-        position: absolute;
-        bottom: 0;
     }
-
+    .light_paint img{width: 100%;height: auto;bottom: 100%;}
+    .light_paint .img_mask{height: auto;}
 
 }
 
@@ -732,13 +732,8 @@ p.flip_card{display: none;}
         top: -30px;
         height: 76px;
     }
-    .light_paint{
-        flex-direction: column;
-        align-items: center;
-        height: auto;
-    }
+    
    
-    .light_paint img{width: 100%;}
     .S1_sticker{min-width:50px;right: 10px;top: -17px;}
     .creater_box .creater_logo{min-width: 200px;height: 200px;max-width: 200px;}
     h3{font-size: 22px;}

@@ -213,10 +213,10 @@
                             <li>
                                 <h5 class="SW">To U 燈光畫 乙幅 *1名</h5>
                             </li>
-                            <p class="SW">點擊圖片可開燈</p>
+                            <p class="SW">溫馨提示：點擊圖片可開關燈</p>
                             <li class="light_paint">
-                                <div class="img_mask light_paint_img1"> <img src="css/ToU_light_v1.png" alt="light01"></div>
-                                <div class="img_mask light_paint_img2"> <img src="css/ToU_light_v2.png" alt="light02"></div>
+                                <div class="img_mask light_paint_img"> <img src="css/ToU_light_v1.png" alt="light01"></div>
+                                <div class="img_mask light_paint_img"> <img src="css/ToU_light_v2.png" alt="light02"></div>
                             </li>
 
                         </ul>
@@ -293,22 +293,28 @@
         $(window).resize(function () { 
             hideMobilePage();
         });
-        document.addEventListener('DOMContentLoaded', function() {
-            function adjustDivHeight() {
-                var img = document.querySelector('.img_mask img');
-                var div = img.parentElement;
-                if (img.complete) {
-                    div.style.height = (img.height / 2) + 'px';
-                } else {
-                    img.onload = function() {
-                        div.style.height = (img.height / 2) + 'px';
-                    };
-                }
-            }
 
-            window.addEventListener('resize', adjustDivHeight);
-            adjustDivHeight();
-        });
+       
+
+        document.addEventListener('DOMContentLoaded', function() {
+        function adjustDivHeight() {
+            var imgMasks = document.querySelectorAll('.img_mask');
+            imgMasks.forEach(function(div) {
+                var img = div.querySelector('img');
+                function setDivHeight() {
+                    div.style.height = (img.height / 2) + 'px';
+                }
+                if (img.complete) {
+                    setDivHeight();
+                } else {
+                    img.onload = setDivHeight;
+                }
+            });
+        }
+
+        window.addEventListener('resize', adjustDivHeight);
+        adjustDivHeight();
+    });
 
 
     </script>
