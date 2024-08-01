@@ -268,6 +268,15 @@
                 $(this).find("img").addClass("img_change");
             });
 
+            $('.turn_light_btn_A').on('click', function () {
+                $('.turn_light_btn_A ~ li').find("div > img").toggleClass("turn_light_mob");
+                $(this).toggleClass("btn_move");
+            });
+
+            $('.turn_light_btn_B').on('click', function () {
+                $('.turn_light_btn_B ~ li').find("div > img").toggleClass("turn_light_mob");
+                $(this).toggleClass("btn_move");
+            });
             
           
            
@@ -275,50 +284,7 @@
 
         });
 
-        function hideMobilePage() {
-                // 獲取螢幕寬度
-            const windowWidth = $(window).width();
-            if (windowWidth < 784) {
-                //寬度768以內要執行的事情
-                // $('.img_mask').on('click', function () {
-                // $(this).find("img").toggleClass("turn_light_mob");
-                // });
-
-                $('.turn_light_btn_A').on('click', function () {
-                $('.turn_light_btn_A ~ li').find("div > img").toggleClass("turn_light_mob");
-                $(this).toggleClass("btn_move");
-                });
-
-                $('.turn_light_btn_B').on('click', function () {
-                $('.turn_light_btn_B ~ li').find("div > img").toggleClass("turn_light_mob");
-                $(this).toggleClass("btn_move");
-                });
-            } else {
-                // 寬度大於768要執行的事情
-                // $('.img_mask').on('click', function () {
-                // // $(".light_paint img").removeClass("turn_light");
-                // $(this).find("img").toggleClass("turn_light");
-                // });
-                $('.turn_light_btn_A').on('click', function () {
-                $('.turn_light_btn_A ~ li').find("div > img").toggleClass("turn_light_mob");
-                $(this).toggleClass("btn_move");
-                });
-
-                $('.turn_light_btn_B').on('click', function () {
-                $('.turn_light_btn_B ~ li').find("div > img").toggleClass("turn_light_mob");
-                $(this).toggleClass("btn_move");
-                });
-                
-
-            }
-        }
-        // 初始化時執行一次
-        hideMobilePage();
-        // 當螢幕寬度改變時執行
-        $(window).resize(function () { 
-            hideMobilePage();
-        });
-
+        
        
 
         document.addEventListener('DOMContentLoaded', function() {
@@ -345,3 +311,4 @@
     </script>
 </body>
 </html>
+
