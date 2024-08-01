@@ -201,6 +201,7 @@
                             <li>
                                 <h5 class="SW">AmberLand 燈光畫 乙幅 *1名</h5>
                             </li>
+                            <button class="turn_light_btn_A">開燈</button>
                             <p class="SW">溫馨提示：點擊圖片可開關燈</p>
                             <li class="light_paint">
                                 <div class="img_mask light_paint_img"> <img src="css/Amber_light.png" alt="light01"></div>
@@ -213,6 +214,7 @@
                             <li>
                                 <h5 class="SW">To U 燈光畫 乙幅 *1名</h5>
                             </li>
+                            <button class="turn_light_btn_B">開燈</button>
                             <p class="SW">溫馨提示：點擊圖片可開關燈</p>
                             <li class="light_paint">
                                 <div class="img_mask light_paint_img"> <img src="css/ToU_light_v1.png" alt="light01"></div>
@@ -264,6 +266,7 @@
                 $(this).find("img").addClass("img_change");
             });
 
+            
           
            
 
@@ -275,8 +278,16 @@
             const windowWidth = $(window).width();
             if (windowWidth < 784) {
                 // 寬度768以內要執行的事情
-                $('.img_mask').on('click', function () {
-                $(this).find("img").toggleClass("turn_light_mob");
+                // $('.img_mask').on('click', function () {
+                // $(this).find("img").toggleClass("turn_light_mob");
+                // });
+
+                $('.turn_light_btn_A').on('click', function () {
+                $('.turn_light_btn_A ~ li').find("div > img").toggleClass("turn_light_mob");
+                });
+
+                $('.turn_light_btn_B').on('click', function () {
+                $('.turn_light_btn_B ~ li').find("div > img").toggleClass("turn_light_mob");
                 });
             } else {
                 // 寬度大於768要執行的事情
