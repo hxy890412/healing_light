@@ -293,9 +293,18 @@
                 });
             } else {
                 // 寬度大於768要執行的事情
-                $('.img_mask').on('click', function () {
-                // $(".light_paint img").removeClass("turn_light");
-                $(this).find("img").toggleClass("turn_light");
+                // $('.img_mask').on('click', function () {
+                // // $(".light_paint img").removeClass("turn_light");
+                // $(this).find("img").toggleClass("turn_light");
+                // });
+                $('.turn_light_btn_A').on('click', function () {
+                $('.turn_light_btn_A ~ li').find("div > img").toggleClass("turn_light_mob");
+                $(this).toggleClass("btn_move");
+                });
+
+                $('.turn_light_btn_B').on('click', function () {
+                $('.turn_light_btn_B ~ li').find("div > img").toggleClass("turn_light_mob");
+                $(this).toggleClass("btn_move");
                 });
                 
 
